@@ -15,8 +15,6 @@ install-updater = false
 github-attestations = true
 # The installers to generate for each app
 installers = []
-# Which actions to run on pull requests
-pr-run-mode = "upload"
 
 [dist.github-custom-runners]
 aarch64-apple-darwin = "macos-latest"
