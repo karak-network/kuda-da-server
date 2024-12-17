@@ -2,6 +2,11 @@
 name = "da-server"
 version = "0.1.0"
 edition = "2021"
+authors = ["Karak Network"]
+repository = "https://github.com/karak-network/kuda-da-server.git"
+description = "KUDA DA Server"
+license = "BUSL-1.1"
+rust-version = "1.81.0"
 
 [dependencies]
 alloy = { version = "0.7.0", features = [
@@ -33,3 +38,8 @@ tracing = "0.1.41"
 tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
 url = { version = "2.5.4", features = ["serde"] }
 uuid = { version = "1.11.0", features = ["v4"] }
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
